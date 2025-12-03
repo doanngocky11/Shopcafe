@@ -10,4 +10,6 @@
     <string name="see_all">See all</string>
     <string name="available_offers">Available offers</string>
     <string name="cart">Cart</string>
+    <string name="open_cart">Open cart</string>
+
 </resources>

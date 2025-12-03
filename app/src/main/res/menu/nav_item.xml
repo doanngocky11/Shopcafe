@@ -8,9 +8,11 @@
         app:iconTint="@color/black"/>
 
     <item
+        android:id="@+id/nav_profile"
         android:title=""
         android:icon="@drawable/bottom_btn2"
         app:iconTint="@color/black"/>
+
 
     <item
         android:id="@+id/cart"
@@ -18,6 +20,7 @@
         android:enabled="false"/>
 
     <item
+        android:id="@+id/card_credit"
         android:title=""
         android:icon="@drawable/bottom_btn3"
         app:iconTint="@color/black"/>

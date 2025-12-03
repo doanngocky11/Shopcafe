@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.shopcafe"
-        minSdk = 36
-        targetSdk = 36
+        minSdk = 26  // <-- Thay đổi thành 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -36,13 +36,18 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.recyclerview)  // Bây giờ sẽ resolve được
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }

@@ -22,6 +22,24 @@
         </activity>
 
         <activity
+            android:name=".activity.CreditCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CardDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.SignupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.ProfileScreenActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".activity.MainActivity"
             android:exported="false" />
 
