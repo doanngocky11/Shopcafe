@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "690329067492",
+    "project_id": "app-coffe-c3673",
+    "storage_bucket": "app-coffe-c3673.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690329067492:android:fa43b72f5ec2597f7cf1f1",
+        "android_client_info": {
+          "package_name": "com.example.shopcafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSmgHt49uSTDoJ8tUtSUt7pNjH1RsL8mw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
