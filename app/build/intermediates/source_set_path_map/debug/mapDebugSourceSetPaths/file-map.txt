@@ -1,0 +1,55 @@
+com.example.shopcafe.app-core-viewtree-1.0.0-0 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\0f03840a1583a79ab9a69cd90a40aac1\transformed\core-viewtree-1.0.0\res
+com.example.shopcafe.app-emoji2-1.3.0-1 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\1093a17e0290abcb50083386a115c6dd\transformed\emoji2-1.3.0\res
+com.example.shopcafe.app-core-1.15.0-2 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\18df42f9ebd84dee6ecb0b9e1562230e\transformed\core-1.15.0\res
+com.example.shopcafe.app-datastore-preferences-release-3 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\21b288af8d207ed85be09905cba615c5\transformed\datastore-preferences-release\res
+com.example.shopcafe.app-lifecycle-livedata-2.6.2-4 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\24550f80d48779fadaba16b530232b5b\transformed\lifecycle-livedata-2.6.2\res
+com.example.shopcafe.app-lifecycle-process-2.6.2-5 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\2a8146fc32682246fc6ea24e8d7e3c12\transformed\lifecycle-process-2.6.2\res
+com.example.shopcafe.app-core-runtime-2.2.0-6 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\2c221f446ce4edfd0aae8757bb2e0884\transformed\core-runtime-2.2.0\res
+com.example.shopcafe.app-fragment-1.5.4-7 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\2e423ccb782a3ec52ef5d420b3fe8f87\transformed\fragment-1.5.4\res
+com.example.shopcafe.app-firebase-common-22.0.1-8 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\38f57b1d51e8164c450a844d8d649f6e\transformed\firebase-common-22.0.1\res
+com.example.shopcafe.app-viewpager2-1.1.0-beta02-9 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\3df53d2a6e3474b8f04718bce9b357cf\transformed\viewpager2-1.1.0-beta02\res
+com.example.shopcafe.app-play-services-auth-20.7.0-10 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\458ffaf94a096f1c8466847dd4119c88\transformed\play-services-auth-20.7.0\res
+com.example.shopcafe.app-drawerlayout-1.1.1-11 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\54650488a91e98a5b83c67975235d2d1\transformed\drawerlayout-1.1.1\res
+com.example.shopcafe.app-savedstate-1.2.1-12 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\5c56c77d70c1b2aac3e8bf31ab7fa02a\transformed\savedstate-1.2.1\res
+com.example.shopcafe.app-coordinatorlayout-1.1.0-13 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\5d6cca565287d01c08d4edeaf3552c07\transformed\coordinatorlayout-1.1.0\res
+com.example.shopcafe.app-credentials-1.2.0-rc01-14 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\6aad21a497f765043182043438d7a7d6\transformed\credentials-1.2.0-rc01\res
+com.example.shopcafe.app-transition-1.5.0-15 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\6b39d27d08924fc2f67f72e37ccad487\transformed\transition-1.5.0\res
+com.example.shopcafe.app-cardview-1.0.0-16 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\704ae198b742459d9d50ccd590d62eb5\transformed\cardview-1.0.0\res
+com.example.shopcafe.app-customview-poolingcontainer-1.0.0-17 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\7661193a0b8ce56bd924ceceaee6c4af\transformed\customview-poolingcontainer-1.0.0\res
+com.example.shopcafe.app-credentials-play-services-auth-1.2.0-rc01-18 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\7ac0fd6e21da707a11402118dbaf2332\transformed\credentials-play-services-auth-1.2.0-rc01\res
+com.example.shopcafe.app-datastore-release-19 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\7e2e2bebf915b2e9876ec43bffbe67fc\transformed\datastore-release\res
+com.example.shopcafe.app-appcompat-resources-1.7.0-20 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\7fd3b4348b67cbc7bbbdd2376cbf9128\transformed\appcompat-resources-1.7.0\res
+com.example.shopcafe.app-profileinstaller-1.4.0-21 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\88665b3afd0755ca9f0dd6a6cdbbeba6\transformed\profileinstaller-1.4.0\res
+com.example.shopcafe.app-lifecycle-runtime-2.6.2-22 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\899da0b7e3771a4b4267e2ad293c665a\transformed\lifecycle-runtime-2.6.2\res
+com.example.shopcafe.app-datastore-core-release-23 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\8ac4cb4fc0fdd885fb351739d716f3a4\transformed\datastore-core-release\res
+com.example.shopcafe.app-dynamicanimation-1.1.0-24 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\a1dcff8e485116e55c6192ee27fb2d06\transformed\dynamicanimation-1.1.0\res
+com.example.shopcafe.app-startup-runtime-1.1.1-25 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\a7fe871933ce0e27477703924033a544\transformed\startup-runtime-1.1.1\res
+com.example.shopcafe.app-tracing-1.2.0-26 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\a83651c75336485c4ec70f7661b8c4dc\transformed\tracing-1.2.0\res
+com.example.shopcafe.app-core-common-2.0.3-27 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\a8ac96cb972dad85f2f694480fec5cae\transformed\core-common-2.0.3\res
+com.example.shopcafe.app-ads-adservices-1.1.0-beta11-28 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\aa734e87358d7bf9ac087a5d6fd9dc04\transformed\ads-adservices-1.1.0-beta11\res
+com.example.shopcafe.app-lifecycle-viewmodel-savedstate-2.6.2-29 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\af88f8d3e9f9f3247e1cb0c30e68d924\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.shopcafe.app-material-1.13.0-30 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\b06d3a2ec59a8d9a7adf4df3aa3916b0\transformed\material-1.13.0\res
+com.example.shopcafe.app-lifecycle-livedata-core-2.6.2-31 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\ccb7cabadd6c0141e5a52fb16bc72851\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.shopcafe.app-emoji2-views-helper-1.3.0-32 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\ccd2734748ff63f71adbea8995051c1e\transformed\emoji2-views-helper-1.3.0\res
+com.example.shopcafe.app-datastore-preferences-core-release-33 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\d10b443793b3e962d5baa51cc2b17c6b\transformed\datastore-preferences-core-release\res
+com.example.shopcafe.app-lifecycle-viewmodel-2.6.2-34 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\d48d2ef7bd064269ce3c924ad990ed62\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.shopcafe.app-core-ktx-1.15.0-35 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\d5310f037829696731166c67a2beac58\transformed\core-ktx-1.15.0\res
+com.example.shopcafe.app-appcompat-1.7.0-36 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\d8a313560b7d786d580208599985994d\transformed\appcompat-1.7.0\res
+com.example.shopcafe.app-ads-adservices-java-1.1.0-beta11-37 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\dc620c9600287a98a2016864252be2aa\transformed\ads-adservices-java-1.1.0-beta11\res
+com.example.shopcafe.app-browser-1.4.0-38 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\e3a4abdfbec6b3e260a151bb89ffd291\transformed\browser-1.4.0\res
+com.example.shopcafe.app-constraintlayout-2.1.4-39 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\e3eaf2e616c43f134b3124fcf191c30a\transformed\constraintlayout-2.1.4\res
+com.example.shopcafe.app-play-services-basement-18.5.0-40 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\e4493c6825c466463c53b2ccbb5a65e9\transformed\play-services-basement-18.5.0\res
+com.example.shopcafe.app-annotation-experimental-1.4.1-41 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\e545b35981761004014999e64d97c563\transformed\annotation-experimental-1.4.1\res
+com.example.shopcafe.app-recyclerview-1.3.2-42 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\f4f7a1610a7165d763a15b576bbdde4f\transformed\recyclerview-1.3.2\res
+com.example.shopcafe.app-activity-1.10.1-43 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\f5f5cbf1111b83bae5a98ff09307d708\transformed\activity-1.10.1\res
+com.example.shopcafe.app-graphics-shapes-release-44 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\f9c02cbb72810d5f449fc0aaa771b8a0\transformed\graphics-shapes-release\res
+com.example.shopcafe.app-play-services-base-18.5.0-45 C:\Users\LAPTOP AK\.gradle\caches\8.13\transforms\ff21bb95008ad2f06c73884d62bb6045\transformed\play-services-base-18.5.0\res
+com.example.shopcafe.app-pngs-46 D:\abc\all\Shopcafe\app\build\generated\res\pngs\debug
+com.example.shopcafe.app-res-47 D:\abc\all\Shopcafe\app\build\generated\res\processDebugGoogleServices
+com.example.shopcafe.app-resValues-48 D:\abc\all\Shopcafe\app\build\generated\res\resValues\debug
+com.example.shopcafe.app-updated_navigation_xml-49 D:\abc\all\Shopcafe\app\build\generated\updated_navigation_xml\debug
+com.example.shopcafe.app-packageDebugResources-50 D:\abc\all\Shopcafe\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.shopcafe.app-packageDebugResources-51 D:\abc\all\Shopcafe\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.shopcafe.app-debug-52 D:\abc\all\Shopcafe\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.shopcafe.app-debug-53 D:\abc\all\Shopcafe\app\src\debug\res
+com.example.shopcafe.app-main-54 D:\abc\all\Shopcafe\app\src\main\res
