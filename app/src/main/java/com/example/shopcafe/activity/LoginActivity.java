@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.shopcafe.R;
+import com.example.shopcafe.database.DatabaseHelper;
+import com.example.shopcafe.model.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -90,18 +92,34 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Đăng nhập thành công
                             Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công!",
-                                    Toast.LENGTH_SHORT).show();
+                            FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-                            // Chuyển sang MainActivity
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
+                            if (firebaseUser != null) {
+                                String uid = firebaseUser.getUid();
+
+                                // ✨ Kiểm tra user trong SQLite, tạo mới nếu chưa có
+                                DatabaseHelper dbHelper = new DatabaseHelper(LoginActivity.this);
+                                if (!dbHelper.isUserExists(uid)) {
+                                    // Tạo user mới (trường hợp migrate hoặc user cũ)
+                                    UserModel newUser = new UserModel(
+                                            0, uid, "", 0, "", email, "", "",
+                                            "", "", "", "", null
+                                    );
+                                    dbHelper.addUser(newUser);
+                                    Log.d(TAG, "Created new SQLite user for existing Firebase user");
+                                }
+
+                                Toast.makeText(LoginActivity.this, "Đăng nhập thành công!",
+                                        Toast.LENGTH_SHORT).show();
+
+                                // ✨ Truyền Firebase UID sang MainActivity
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                intent.putExtra("firebase_uid", uid);
+                                startActivity(intent);
+                                finish();
+                            }
                         } else {
-                            // Đăng nhập thất bại
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(LoginActivity.this, "Sai tài khoản hoặc mật khẩu!",
                                     Toast.LENGTH_SHORT).show();

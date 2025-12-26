@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.shopcafe.R;
+import com.example.shopcafe.database.DatabaseHelper;
+import com.example.shopcafe.model.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -87,28 +89,57 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Đăng ký thành công
                             Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-                            // ĐĂNG XUẤT ngay sau khi đăng ký để user phải đăng nhập lại
+                            if (firebaseUser != null) {
+                                String uid = firebaseUser.getUid();
+
+                                // ✨ Tạo user mới trong SQLite với Firebase UID
+                                DatabaseHelper dbHelper = new DatabaseHelper(SignupActivity.this);
+                                UserModel newUser = new UserModel(
+                                        0,              // Auto increment
+                                        uid,            // Firebase UID
+                                        "",             // Name - để trống, user sẽ điền sau
+                                        0,              // Age
+                                        "",             // Gender
+                                        email,          // Email từ Firebase
+                                        "",             // Phone
+                                        "",             // Address
+                                        "",             // Bank name
+                                        "",             // Bank account number
+                                        "",             // Bank account name
+                                        username.getText().toString().trim(), // Username
+                                        null            // Avatar URL
+                                );
+
+                                long result = dbHelper.addUser(newUser);
+
+                                if (result > 0) {
+                                    Log.d(TAG, "User added to SQLite with ID: " + result);
+                                } else {
+                                    Log.e(TAG, "Failed to add user to SQLite");
+                                }
+                            }
+
+                            // Đăng xuất ngay sau khi đăng ký
                             mAuth.signOut();
 
-                            Toast.makeText(SignupActivity.this, "Đăng ký thành công! Vui lòng đăng nhập.",
+                            Toast.makeText(SignupActivity.this,
+                                    "Đăng ký thành công! Vui lòng đăng nhập.",
                                     Toast.LENGTH_SHORT).show();
 
-                            // Chuyển về LoginActivity và truyền email, password
+                            // Chuyển về LoginActivity
                             Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                             intent.putExtra("email", email);
                             intent.putExtra("password", password);
                             startActivity(intent);
                             finish();
                         } else {
-                            // Đăng ký thất bại
+                            // Xử lý lỗi đăng ký...
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
                             String errorMessage = "Đăng ký thất bại!";
 
-                            // Xử lý các lỗi cụ thể
                             if (task.getException() != null) {
                                 String error = task.getException().getMessage();
                                 if (error != null) {
