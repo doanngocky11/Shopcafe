@@ -77,6 +77,8 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
              .into(holder.pic);
         */
 
+        holder.pic.setImageResource(product.getImage());
+
         // --- Xử lý click để chuyển sang màn hình chi tiết ---
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailedActivity.class);

@@ -17,9 +17,6 @@ import com.google.android.material.imageview.ShapeableImageView;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Adapter cho RecyclerView hiển thị các mặt hàng trong Giỏ hàng.
- */
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     private final List<CartItem> cartItems;
@@ -35,56 +32,46 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cart, parent, false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.viewholder_cart, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Sử dụng final int adapterPosition để đảm bảo sử dụng đúng vị trí khi click
         final int adapterPosition = holder.getAdapterPosition();
-        if (adapterPosition == RecyclerView.NO_POSITION) return; // Bảo vệ khỏi lỗi
+        if (adapterPosition == RecyclerView.NO_POSITION) return;
 
         CartItem item = cartItems.get(adapterPosition);
         ProductModel p = item.getProduct();
 
-        // 1. Hiển thị Tên sản phẩm
         holder.titleTxt.setText(p.getTitle());
-
-        // 2. Giá mỗi item (feeEachItem)
         holder.feeEachItem.setText(String.format(Locale.US, "$%.2f", p.getPrice()));
 
-        // 3. Tổng giá item này (totalEachItem)
         double total = p.getPrice() * item.getNumberInCart();
         holder.totalEachItem.setText(String.format(Locale.US, "$%.2f", total));
 
-        // 4. Số lượng
         holder.numberItemTxt.setText(String.valueOf(item.getNumberInCart()));
 
-        // TODO: Load ảnh sản phẩm (Giữ nguyên phần này)
+        // ===== HIỂN THỊ HÌNH ẢNH TRONG GIỎ HÀNG =====
+        holder.cartPicture.setImageResource(p.getImage());
+        // ============================================
 
-        // --- Xử lý sự kiện click ---
-
-        // Nút Tăng số lượng
         holder.plusCartBtn.setOnClickListener(v -> {
             cartManager.plusNumberItem(cartItems, adapterPosition, () -> {
-                // Callback sau khi dữ liệu giỏ hàng thay đổi
-                notifyItemChanged(adapterPosition); // Cập nhật hàng hiện tại
-                changeNumberItemsListener.onCartDataChanged(); // Cập nhật tổng tiền ở Activity/Fragment
+                notifyItemChanged(adapterPosition);
+                changeNumberItemsListener.onCartDataChanged();
             });
         });
 
-        // Nút Giảm số lượng
         holder.minusCartBtn.setOnClickListener(v -> {
             cartManager.minusNumberItem(cartItems, adapterPosition, () -> {
-                // Callback sau khi dữ liệu giỏ hàng thay đổi
-                // Kiểm tra nếu item bị xóa (số lượng về 0), ta cần dùng notifyDataSetChanged hoặc notifyItemRemoved
                 if (cartItems.isEmpty() || cartItems.size() <= adapterPosition) {
-                    notifyDataSetChanged(); // Cập nhật lại toàn bộ list nếu có xóa
+                    notifyDataSetChanged();
                 } else {
-                    notifyItemChanged(adapterPosition); // Cập nhật hàng hiện tại
+                    notifyItemChanged(adapterPosition);
                 }
-                changeNumberItemsListener.onCartDataChanged(); // Cập nhật tổng tiền ở Activity/Fragment
+                changeNumberItemsListener.onCartDataChanged();
             });
         });
     }
@@ -94,7 +81,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         return cartItems.size();
     }
 
-    // ViewHolder class (giữ nguyên)
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView titleTxt, feeEachItem, totalEachItem, minusCartBtn, numberItemTxt, plusCartBtn;
         ShapeableImageView cartPicture;

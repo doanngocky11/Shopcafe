@@ -32,6 +32,7 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
     private int numberOrder = 1;
     private SizeAdapter sizeAdapter;
     private String currentSelectedSize;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,7 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
         setVariable();
         setupSizeList();
     }
+
     private void initView() {
         titleTxt = findViewById(R.id.titleTxt);
         priceTxt = findViewById(R.id.priceTxt);
@@ -56,6 +58,7 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
         productPic = findViewById(R.id.shapeableImageView);
         rvSizeList = findViewById(R.id.rvSizeList);
     }
+
     private void getBundle() {
         product = (ProductModel) getIntent().getSerializableExtra("object");
         if (product == null) {
@@ -63,14 +66,19 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
             finish();
         }
     }
+
     private void setVariable() {
         if (product == null) return;
+
         titleTxt.setText(product.getTitle());
         updatePrice();
         descriptionTxt.setText(product.getDescription());
         ratingBar.setRating((float) product.getStar());
-
         numberItemTxt.setText(String.valueOf(numberOrder));
+
+        // ===== HIỂN THỊ HÌNH ẢNH SẢN PHẨM =====
+        productPic.setImageResource(product.getImage());
+        // ======================================
 
         ivBack.setOnClickListener(v -> finish());
 
@@ -78,13 +86,11 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
             Toast.makeText(DetailedActivity.this, "Đã thêm/Xóa khỏi mục Yêu thích!", Toast.LENGTH_SHORT).show();
         });
 
-
         plusCart.setOnClickListener(v -> {
             numberOrder = numberOrder + 1;
             numberItemTxt.setText(String.valueOf(numberOrder));
             updatePrice();
         });
-
 
         minusCart.setOnClickListener(v -> {
             if (numberOrder > 1) {
@@ -94,13 +100,11 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
             }
         });
 
-
         addToCartBtn.setOnClickListener(v -> {
             if (currentSelectedSize == null || currentSelectedSize.isEmpty()) {
                 Toast.makeText(DetailedActivity.this, "Vui lòng chọn kích cỡ!", Toast.LENGTH_SHORT).show();
                 return;
             }
-
 
             CartItem newItem = new CartItem(product, numberOrder, currentSelectedSize);
             cartManager.addToCart(newItem);
@@ -109,14 +113,12 @@ public class DetailedActivity extends BaseActivity implements SizeAdapter.OnSize
             finish();
         });
 
-
         if (product.getAvailableSizes() != null && !product.getAvailableSizes().isEmpty()) {
             currentSelectedSize = product.getAvailableSizes().get(0);
         }
     }
 
     private void setupSizeList() {
-
         if (product.getAvailableSizes() != null) {
             rvSizeList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
             sizeAdapter = new SizeAdapter(product.getAvailableSizes(), this);

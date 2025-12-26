@@ -23,8 +23,8 @@ public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_offer, parent, false);
+        View inflate = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.viewholder_offer, parent, false);
         return new ViewHolder(inflate);
     }
 
@@ -33,11 +33,24 @@ public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.ViewHolder> 
         OfferModel offer = offerList.get(position);
 
         holder.title.setText(offer.getTitle());
-
         holder.price.setText(offer.getExtra());
 
-        holder.itemView.setOnClickListener(v -> {
+        // ===== HIỂN THỊ HÌNH ẢNH BANNER =====
+        // Chuyển tên hình từ String sang resource ID
+        String picName = offer.getPicUrl(); // Ví dụ: "pic_offer1"
+        int imageResId = holder.itemView.getContext().getResources()
+                .getIdentifier(picName, "drawable", holder.itemView.getContext().getPackageName());
 
+        if (imageResId != 0) {
+            holder.pic.setImageResource(imageResId);
+        } else {
+            // Hiển thị hình placeholder nếu không tìm thấy
+            holder.pic.setImageResource(R.drawable.coffee_cup_1);
+        }
+        // ====================================
+
+        holder.itemView.setOnClickListener(v -> {
+            // Xử lý click nếu cần
         });
     }
 
@@ -47,12 +60,11 @@ public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.ViewHolder> 
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView title, price; // price ở đây là TextView có ID priceTxt
-        ImageView pic; // shapeableImageView trong XML
+        TextView title, price;
+        ImageView pic;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            // Khởi tạo các ID từ viewholder_offer.xml
             title = itemView.findViewById(R.id.titleTxt);
             price = itemView.findViewById(R.id.priceTxt);
             pic = itemView.findViewById(R.id.shapeableImageView);
